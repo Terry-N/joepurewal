@@ -1,6 +1,4 @@
-body {
-    margin-top: 0px;
-}
+
 
 footer {
     font-size: 75%;
@@ -41,7 +39,7 @@ img {
 /* Grid area stuff */
 .homeNavPlaceholder {
     grid-area: homeNavPlaceholder;
-    height: 188px; /* match Purewal logo height */
+    height: 218px; /* match Purewal logo height */
 }
 .homeBanner { grid-area: homeBanner; }
 .homeReviewLeft { grid-area: homeReviewLeft; }
@@ -173,8 +171,8 @@ img {
     /* background: url(house.jpeg);
     background-position: center;
     background-size: cover; */
-    height: 500px;
-    width: 100%;
+    height: 540px;
+    /* width: 100%; */
 }
 
 .topNav {
