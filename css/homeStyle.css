@@ -7,7 +7,6 @@ footer {
 /* make images responsively scale down, but never larger than original size */
 img {
     max-width: 100%;
-    width: auto;
     height: auto;
 }
 
