@@ -169,7 +169,7 @@ img {
     /* background: url(house.jpeg);
     background-position: center;
     background-size: cover; */
-    height: 540px;
+    max-height: 540px;
     /* width: 100%; */
 }
 
