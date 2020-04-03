@@ -20,12 +20,12 @@
       if (!x.className.includes("bg-dark")) {
         x.className += " bg-dark";
         x.className = x.className.replace("navbar-light", "navbar-dark");
-        document.getElementById("brand").src="/images/JP-328×89-REVERSE-Web-Banner.png";
+        document.getElementById("brand").src="images/JP-328×89-REVERSE-Web-Banner.png";
       }
     } else {
       x.className = x.className.replace(" bg-dark", "");
       x.className = x.className.replace("navbar-dark", "navbar-light");
-      document.getElementById("brand").src="/images/JP-328×89-REVERSE-Web-Banner-Black.png";
+      document.getElementById("brand").src="images/JP-328×89-REVERSE-Web-Banner-Black.png";
     }
   }
 
