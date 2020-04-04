@@ -33,6 +33,9 @@ img { /* make images responsively scale down but never larger than original size
     padding-top: 20px;
     padding-bottom: 20px;
 }
+.boxBody {
+  min-height: 300px;
+}
 
 .navbar-custom { /* Nav bar (is outside grid) */
     background-color: white;
