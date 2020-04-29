@@ -28,7 +28,6 @@ img { /* make images responsively scale down but never larger than original size
 
 /* todo: split into lower content & header / banner content boxes */
 .boxAll {
-    /* min-height: 300px; */
     border-bottom: 1px solid #d8ae4d;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -37,13 +36,12 @@ img { /* make images responsively scale down but never larger than original size
   min-height: 300px;
 }
 
-.navbar-custom { /* Nav bar (is outside grid) */
+.navbar-custom {
     background-color: white;
     text-transform: uppercase;
     font-size: 1.2em;
     transition: background-color 0.2s, color 0.2s;
 }
-
 .navbar-custom.nav-scrolled {
     background-color: #042557;
 }
@@ -89,24 +87,15 @@ img { /* make images responsively scale down but never larger than original size
     -o-transition: opacity 2.5s ease-in;
        transition: opacity 2.5s ease-in;
 }
-.setTextAnim {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "sloganLetterS sloganLetterE sloganLetterT"
-        "sloganTextS sloganTextE sloganTextT"
-    ;
-    gap: 2px;
-    place-items: center; /* allows background to fill entire area */
-    /* justify-items: center; */
-
-    background-color: rgb(224, 224, 224);
-    color: black;
-    /* font-size: 10.0em; */
-}
 .setTextFade {
   opacity: 1;
+}
+.setTextAnim {
+  background-color: rgb(224, 224, 224);
+  color: black;
+}
+.setSubtitle {
+    font-size: 2.5vw
 }
 
 @media screen and (orientation: portrait) {
@@ -136,7 +125,6 @@ img { /* make images responsively scale down but never larger than original size
         ;
         gap: 2px;
         place-items: center; /* allows background to fill entire area */
-        /* justify-items: center; */
     }
     /* End of Grid */
     

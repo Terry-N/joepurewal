@@ -65,22 +65,26 @@
     </nav>
 
     <section class="homeGrid">
-      <section class="homeBanner">
+      <section class="homeBanner container-fluid">
         <!-- <svg height="65" width="500">
           <polygon points="250,5 500,60 0,60" style="fill:none;stroke:#d8ae4d;stroke-width:3" />
           <text x="212" y="55" font-family="Times New Roman" font-size="35" fill="black">GET</text>
         </svg> -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 13" preserveAspectRatio="xMidYMax slice">
           <polygon points="100,1 200,12 0,12" style="fill:none;stroke:#d8ae4d;stroke-width:1"  />
-          <text x="92.25" y="11" font-family="Times New Roman" font-size="7" fill="black">GET</text>
+          <text x="88.5" y="11" font-family="Times New Roman" font-size="10" fill="black">GET</text>
         </svg>
-        <div class="setTextAnim">
-          <div class="col setTextS" id="sloganLetterS">S</div>
-          <div class="col setTextE" id="sloganLetterE">E</div>
-          <div class="col setTextT" id="sloganLetterT">T</div>
-          <div class="col setTextS" id="sloganTextS">SAFE</div>
-          <div class="col setTextE" id="sloganTextE">EASY</div>
-          <div class="col setTextT" id="sloganTextT">TRUSTWORTHY</div>
+        <div class="container setTextAnim">
+          <div class="row setLetters">
+            <div class="col setTextS mx-auto" id="sloganLetterS">S</div>
+            <div class="col setTextE mx-auto" id="sloganLetterE">E</div>
+            <div class="col setTextT mx-auto" id="sloganLetterT">T</div>
+          </div>
+          <div class="row setSubtitle">
+            <div class="col setTextS mx-auto" id="sloganTextS">SAFE</div>
+            <div class="col setTextE mx-auto" id="sloganTextE">EASY</div>
+            <div class="col setTextT mx-auto" id="sloganTextT">TRUSTWORTHY</div>
+          </div>
         </div>
         <br />
         <h3>WITH</h3>
@@ -110,7 +114,7 @@
         <div class="boxBody">
           <div class="boxRatesAdLeft">
             <h2>Joe Purewal & Associates</h2>
-            <p>Direct: (905) 330-6090 | Office:: (905) 281-3555</p>
+            <p>Direct: (905) 330-6090 | Office: (905) 281-3555</p>
             <p><a href="#testimonials">See what our clients think!</a></p>
           </div>
         </div>
@@ -218,12 +222,23 @@
       </section>
     </section>
 
-    <footer class="footer">
-      151 City Centre Drive, Suite 601, Mississauga, ON, L5B 1M7
-      <br />
-      Brokerage # 10801 <span style="color: #d8ae4d;">|</span>
-      F: 1 888 529 3144 <span style="color: #d8ae4d;">|</span>
-      E: documents@joepurewal.ca
+    <footer class="footer row">
+      <div class="col">
+        Joe Purewal & Associates
+        <br />
+        Brokerage #10801
+      </div>
+      <div class="col">
+        <p>151 City Centre Drive, Suite 601</p>
+        <p>Mississauga, ON, L5B 1M7</p>
+        <p>Direct: (905) 330-6090 <span style="color: #d8ae4d;">|</span> Office: (905) 281-3555</p>
+        <p>Fax: 1-888-529-3144</p>
+        <p>Email: info@joepurewal.ca</p>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+      </div>
     </footer>
   </div>
 </body>

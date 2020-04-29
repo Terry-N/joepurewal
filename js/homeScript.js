@@ -24,6 +24,7 @@
   }
 
   function onLoadFunction() {
+    // Animate the S E T text
     var textS = document.getElementsByClassName("setTextS")[0];
     textS.className += " setTextFade";
     var textS = document.getElementsByClassName("setTextS")[1];
@@ -41,7 +42,7 @@
   }
 
   // attach the function to onscroll
-  window.onscroll = function() {this.scrollFunction()};
-  window.onload = function() {this.onLoadFunction()};
+  window.onscroll = function() { this.scrollFunction()} ;
+  window.onload = function() { this.onLoadFunction() };
 // });
 
