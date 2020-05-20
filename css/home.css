@@ -202,9 +202,9 @@ footer {
     font-size: 0.965em;
   }
   
-  #brand {
+  /* #brand {
     max-width: 400px;
-  }
+  } */
 
   /* box for all content, portrait version */
   .box-all:not(:last-child) {
