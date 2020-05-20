@@ -79,8 +79,8 @@ function ieScrollFunction() {
       document.getElementById("brand").src = bannerLogoNameLight; // invert logo
       navbar.classList.add("nav-scrolled"); // trigger the fade in
       navbar.classList.add("shadow-lg");  // add a shadow
-      //navbar.parentElement.classList.add("sticky");     // sticky-top alternative (doesn't work in IE)
-      navbar.classList.add("sticky");     // sticky-top alternative (doesn't work in IE)
+      // navbar.classList.add("sticky");     // sticky-top alternative (doesn't work in IE)
+      //navbar.parentElement.classList.add("sticky");
     }
   }
   // else (scrolled to the top)
@@ -91,29 +91,37 @@ function ieScrollFunction() {
     navbar.classList.remove("nav-scrolled");
     // remove the shadow
     navbar.classList.remove("shadow-lg");
-    //navbar.parentElement.classList.remove("sticky");    // sticky-top alternative (doesn't work in IE)
-    navbar.classList.remove("sticky");    // sticky-top alternative (doesn't work in IE)
+    // navbar.classList.remove("sticky");    // sticky-top alternative (doesn't work in IE)
+    //navbar.parentElement.classList.remove("sticky");
   }
 }
 
+var browserIsIE = false;  // set this true if IE detected
 // if user is on IE11 or earlier, use non-bootstrap sticky navbar code
-var browserIsIE = false;  // set this true if using IE (remove if never used)
-if (!finishedLoading && window.document.documentMode) {
-  // align nav with rest of body by adding padding equal to size of navbar (Bootstrap takes care of this on other browsers)
-  //document.getElementsByClassName("content")[0].style.paddingTop = document.getElementById("topNav").style.height;
+if (!finishedLoading) {
+  let navbar = document.getElementById("topNav").parentElement;
 
-  // set the internet explorer-friendly window scroll function
-  window.onscroll = function() { this.ieScrollFunction() };
-  browserIsIE = true;
+  if (window.document.documentMode) {
+    // align nav with rest of body by adding padding equal to size of navbar (Bootstrap takes care of this on other browsers)
+    //document.getElementsByClassName("content")[0].style.paddingTop = document.getElementById("topNav").style.height;
+  
+    // set the internet explorer-friendly window scroll function
+    window.onscroll = function() { this.ieScrollFunction() };
+    navbar.classList.remove("sticky-top");
+    navbar.classList.add("sticky");
+    browserIsIE = true;
+  }
+  // set the regular scroll function for the Bootstrap navbar
+  else {
+    window.onscroll = function() { this.scrollFunction() };
+    // assign sticky-top Bootstrap class to the navbar
+    // navbar.classList.add("sticky-top");
+  }
+
   finishedLoading = true;
-}
-// set the regular scroll function for the Bootstrap navbar
-else if (!finishedLoading) {
-  window.onscroll = function() { this.scrollFunction() };
-  // assign sticky-top Bootstrap class to the navbar
-  let navbar = document.getElementById("topNav");//.parentElement;
-  navbar.classList.add("sticky-top");
-  finishedLoading = true;
+
+  // finally, position user at top of window (hack to fix scroll-down on refresh)
+  // $(window).scrollTop(0); // doesn't actually seem to work. leaving so I remember
 }
 
 // $(document).ready(function() {
